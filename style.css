@@ -19,6 +19,19 @@ body {
     margin-bottom: 40px;
 }
 
+nav {
+    align-self: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color:#00569c;
+}
+
+nav a:hover {
+    color: #eee;
+}
+
 h1 {
     margin: 10px 0 0;
 }
@@ -66,6 +79,7 @@ h3 {
     width: 280px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 17px;
 }
 
 .remained {
@@ -101,4 +115,24 @@ h3 {
 .text {
     text-align: center;
     margin: 0 0 5px;
+}
+
+@media (max-width: 600px) {
+    body {
+        justify-content: space-around;
+        max-height: 100vh;
+    }
+
+    nav {
+        margin-bottom: 10px;
+        font-size: 0.6rem;
+    }
+
+    h3 {
+        10px 0 0 0;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
 }
