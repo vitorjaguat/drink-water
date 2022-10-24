@@ -7,8 +7,17 @@ let selected_lang = 'en';
 updateBigCup();
 
 smallCups.forEach((cup, idx) => { 
-    cup.addEventListener('click', () => highlightCups(idx));
+    cup.addEventListener('click', () => {
+        highlightCups(idx);
+        playSound();
+    })
 })
+
+function playSound() {
+    const soundSource = "sounds/bubble.wav";
+            let sound = new Audio(soundSource);
+            sound.play();
+}
 
 function highlightCups(idx) {
     if(smallCups[idx].classList.contains('full') && ! smallCups[idx].nextElementSibling.classList.contains('full')) {
